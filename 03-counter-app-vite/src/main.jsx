@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './HelloWordApp.jsx';
-import FirstApp from './FirstApp.jsx';
+
+import CounterApp from './CounterApp.jsx'
 
 import './style.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <FirstApp  />
+        <CounterApp value={123}  />
     </React.StrictMode>
 )
 
