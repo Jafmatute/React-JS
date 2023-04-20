@@ -1,4 +1,3 @@
-
 const newMessage = 'Josue';
 
 const getMessage = () => {
