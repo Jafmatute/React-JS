@@ -5,7 +5,7 @@ const getMessage = () => {
 
     return 'React'
 }
-const FirstApp = ({title, subTitle}) => {
+const FirstApp = ({title, subTitle, name}) => {
 
     //if (!title) throw new Error('el titulo no existe')
 
@@ -13,14 +13,22 @@ const FirstApp = ({title, subTitle}) => {
         <>
             <h1>First App {title}</h1>
             <p> {subTitle}</p>
+            <code>{name}</code>
         </>
     )
 }
 
 //PropTypes
 FirstApp.propTypes = {
-    title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number.isRequired
+    subTitle: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired
+}
+
+//DefaultProps --entran primero que los PropTypes
+FirstApp.defaultProps = {
+    name: 'Josue Flores',
+    subTitle: 'No hay subtitulo',
+    title: "No hay titulo"
 }
 
 export default FirstApp;
