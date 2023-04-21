@@ -9,7 +9,7 @@ const FirstApp = ({title, subTitle, name}) => {
 
     return (
         <>
-            <h1>{title}</h1>
+            <div data-testid="test-title">{title}</div>
             <p> {subTitle}</p>
             <code>{name}</code>
         </>
@@ -18,7 +18,7 @@ const FirstApp = ({title, subTitle, name}) => {
 
 //PropTypes
 FirstApp.propTypes = {
-    subTitle: PropTypes.number.isRequired,
+    subTitle: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
 }
 
