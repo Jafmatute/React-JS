@@ -8,8 +8,8 @@ import FirstApp from "./FirstApp.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        {/*<CounterApp value={10}  />*/}
-        <FirstApp title="Hola, soy Vegeta" />
+        <CounterApp value={100}  />
+        {/*<FirstApp title="Hola, soy Vegeta" />*/}
     </React.StrictMode>
 )
 
