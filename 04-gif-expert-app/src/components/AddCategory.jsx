@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const AddCategory = () => {
+const AddCategory = ({setCategories}) => {
 
     const [inputValue, setInputValue] = useState('One punch');
 
@@ -10,7 +10,11 @@ const AddCategory = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        console.log(inputValue)
+        if(inputValue.trim().length <=1) return;
+
+        setCategories(category => [...category, inputValue]);
+
+        setInputValue('');
     }
 
 
@@ -19,6 +23,7 @@ const AddCategory = () => {
         <input
             type='text'
             placeholder="Buscar gits"
+            value={inputValue}
             onChange={onInputChange} />
         </form>
     );
