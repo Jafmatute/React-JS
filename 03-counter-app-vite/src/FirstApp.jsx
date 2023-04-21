@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 
 const newMessage = 'Josue';
-const getMessage = () => {
+const getMessage = () => 'React';
 
-    return 'React'
-}
 const FirstApp = ({title, subTitle, name}) => {
 
     //if (!title) throw new Error('el titulo no existe')
 
     return (
         <>
-            <h1> {title}</h1>
+            <h1>{title}</h1>
             <p> {subTitle}</p>
             <code>{name}</code>
         </>
