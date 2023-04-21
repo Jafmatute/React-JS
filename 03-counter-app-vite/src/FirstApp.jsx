@@ -9,7 +9,7 @@ const FirstApp = ({title, subTitle, name}) => {
 
     return (
         <>
-            <div data-testid="test-title">{title}</div>
+            <h1 data-testid="test-title">{title}</h1>
             <p> {subTitle}</p>
             <code>{name}</code>
         </>
@@ -25,7 +25,7 @@ FirstApp.propTypes = {
 //DefaultProps --entran primero que los PropTypes
 FirstApp.defaultProps = {
     name: 'Josue Flores',
-    subTitle: 123,
+    subTitle: "Hola soy un subtitulo",
     //title: "No hay titulo"
 }
 
