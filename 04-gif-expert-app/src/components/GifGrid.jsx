@@ -1,6 +1,9 @@
+import {getGifs} from '../helpers/getGifs.js';
+
+
 const GifGrid = ({category}) => {
 
-
+    getGifs(category);
 
     return (
         <>
