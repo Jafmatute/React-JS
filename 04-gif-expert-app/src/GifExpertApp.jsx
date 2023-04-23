@@ -4,7 +4,12 @@ import AddCategory from "./components/AddCategory.jsx";
 const GifExpertApp = (props) => {
     const [categories, setCategories] = useState(['One Punch', 'Demon Slayer']);
 
-    const onAddCategory = (category) => setCategories([...categories,category]);
+    const onAddCategory = (category) => {
+
+        if(categories.includes(category)) return;
+
+        setCategories([...categories,category]);
+    }
 
     return(
         <>
@@ -16,8 +21,8 @@ const GifExpertApp = (props) => {
             />
 
             <ol>
-                {categories.map((category,index) => {
-                    return <li key={index}>{category}</li>
+                {categories.map((category) => {
+                    return <li key={category}>{category}</li>
                 })}
             </ol>
         </>
