@@ -7,8 +7,11 @@ exports[`Pruebas en el componente <GifGridItem /> debe hacer match con el snapsh
   >
     <img
       alt="Google"
-      src="www.google.com"
+      src="http://localhost/www.google.com"
     />
+    <p>
+      Google
+    </p>
   </div>
 </div>
 `;
