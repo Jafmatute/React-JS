@@ -1,5 +1,6 @@
 import {getGifs} from '../helpers/getGifs.js';
 import {useEffect, useState} from "react";
+import GifGridItem from "./GifGridItem.jsx";
 
 
 const GifGrid = ({category}) => {
@@ -12,16 +13,14 @@ const GifGrid = ({category}) => {
 
     },[])
 
+    console.log('test', images);
     return (
         <>
             <h3>{category}</h3>
-            <ol>
-                {images.map(({id, title})=>
-                    (
-                        <li key={id}> {title}</li>
-                    )
+            <div className="card-grid">
+                {images.map((image) => (<GifGridItem key={image.id} {...image} />)
                 )}
-            </ol>
+            </div>
         </>
     );
 };
