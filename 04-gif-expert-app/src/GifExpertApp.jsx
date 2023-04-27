@@ -1,10 +1,10 @@
 import {useState} from "react";
 import {AddCategory, GifGrid} from "./components";
 
-const GifExpertApp = (props) => {
-    const [categories, setCategories] = useState(['One Punch']);
+const GifExpertApp = () => {
+    const [categories, setCategories] = useState(["One Punch"]);
 
-    const onAddCategory = (category) => {
+ const onAddCategory = (category) => {
 
         if(categories.includes(category)) return;
 
