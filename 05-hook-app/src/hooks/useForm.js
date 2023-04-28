@@ -4,6 +4,7 @@ const UseForm = (initialForm={}) => {
 
     const [formState, setFormState] = useState(initialForm);
 
+
     const onInputChange = ({target}) => {
 
         const {name, value} = target;
@@ -14,9 +15,13 @@ const UseForm = (initialForm={}) => {
         })
     }
 
+    const onResetForm = () => {
+        setFormState(initialForm);
+    }
+
     return {
         ...formState,
-    formState, onInputChange
+    formState, onInputChange, onResetForm
     }
 }
 export default UseForm;
