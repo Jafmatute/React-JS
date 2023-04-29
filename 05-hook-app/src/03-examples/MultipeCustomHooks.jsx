@@ -1,10 +1,17 @@
 import useFetch from "../hooks/useFecth.js";
+import useCounter from "../hooks/useCounter.js";
 
 const MultipeCustomHooks = () => {
 
-    const {data, isLoading, hasError} = useFetch(' https://api.breakingbadquotes.xyz/v1/quotes/1');
+    const {counter, increment} = useCounter(1);
+
+    const url = `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`
+
+    const {data, isLoading, hasError} = useFetch(url);
 
     const {author, quote} = !!data && data[0];
+
+
 
     return (
         <>
@@ -25,6 +32,10 @@ const MultipeCustomHooks = () => {
                         </blockquote>
                     )
             }
+
+            <button disabled={isLoading} className='btn btn-info' onClick={()=> increment(1)}>
+                Next quote
+            </button>
 
 
         </>
