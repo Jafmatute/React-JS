@@ -1,5 +1,5 @@
-import useFetch from "../hooks/useFecth.js";
-import useCounter from "../hooks/useCounter.js";
+import  {useCounter, useFetch} from "../hooks/";
+import {LoadingQuote, Quote} from "../components/";
 
 const MultipeCustomHooks = () => {
 
@@ -21,15 +21,10 @@ const MultipeCustomHooks = () => {
             {
                 isLoading ?
                     (
-                        <div className='alert alert-info'>
-                            Loading.....
-                        </div>
+                        <LoadingQuote />
                     ):
                     (
-                        <blockquote className='blockquote text-end'>
-                            <p className='mb-1'>{quote}</p>
-                            <footer className='blockquote-footer mt-1'>{author}</footer>
-                        </blockquote>
+                       <Quote quote={quote} author={author} />
                     )
             }
 

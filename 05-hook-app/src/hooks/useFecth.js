@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-const useFetch =(url) => {
+export const useFetch =(url) => {
 
     console.log(url)
 
@@ -36,5 +36,3 @@ const useFetch =(url) => {
         hasError: state.hasError
     }
 }
-
-export default useFetch;
